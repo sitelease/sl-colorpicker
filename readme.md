@@ -1,19 +1,17 @@
 # Colorpicker Module
 
-[![Build Status](https://travis-ci.org/silverstripe/silverstripe-colorpicker.svg?branch=master)](https://travis-ci.org/silverstripe/silverstripe-colorpicker)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/silverstripe/silverstripe-colorpicker/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/silverstripe/silverstripe-colorpicker/?branch=master)
-[![codecov](https://codecov.io/gh/silverstripe/silverstripe-colorpicker/branch/master/graph/badge.svg)](https://codecov.io/gh/silverstripe/silverstripe-colorpicker)
-
 This module adds a color picker field which can be used anywhere in the CMS.
 
 In order to keep the site accessible, custom color selection is not implemented.
+
+![Colorpicker demo image](client/dist/images/colorpicker-demo.png "Colorpicker demo")
 
 ## Installation
 
 To install this module, you can do so with Composer:
 
 ```
-composer require silverstripe/colorpicker
+composer require sitelease/colorpicker
 ```
 
 ## Usage
@@ -21,6 +19,9 @@ composer require silverstripe/colorpicker
 You can use the `ColorPickerField` as follows:
 
 ```php
+    use Sitelease\Colorpicker\Forms\ColorPickerField;
+    //...
+
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();
@@ -58,6 +59,15 @@ You can use the `ColorPickerField` as follows:
         return $fields;
     }
 ```
+
+## Sitelease Alterations
+This module was based off of Silverstripe's official [colorpicker module](https://github.com/silverstripe/silverstripe-colorpicker) however we have modified it's styling and structure to work better with our theme colors system.
+
+Here are the changes:
+- All color labels are hidden by default
+- Swatches are larger and have hover effects
+- Every sixth label is displayed on a full width swatches
+- Popup interface is smaller
 
 ## Versioning
 
