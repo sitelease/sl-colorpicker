@@ -1,6 +1,6 @@
 <?php
 
-namespace SilverStripe\Colorpicker\Forms;
+namespace Sitelease\Colorpicker\Forms;
 
 use SilverStripe\Forms\SingleSelectField;
 

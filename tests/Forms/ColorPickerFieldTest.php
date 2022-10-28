@@ -1,8 +1,8 @@
 <?php
 
-namespace SilverStripe\Colorpicker\Tests\Forms;
+namespace Sitelease\Colorpicker\Tests\Forms;
 
-use SilverStripe\Colorpicker\Forms\ColorPickerField;
+use Sitelease\Colorpicker\Forms\ColorPickerField;
 use SilverStripe\Dev\SapphireTest;
 
 class ColorPickerFieldTest extends SapphireTest
