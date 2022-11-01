@@ -6,7 +6,7 @@ import { loadComponent } from 'lib/Injector';
 jQuery.entwine('ss', ($) => {
   $('.js-injector-boot .form__field-holder .color-picker-field').entwine({
     onmatch() {
-      const ColorPickerComponent = loadComponent('ColorPickerField');
+      const ColorPickerComponent = loadComponent('PaletteColorField');
       const schemaData = this.data('schema');
 
       const props = {

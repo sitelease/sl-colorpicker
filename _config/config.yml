@@ -1,8 +1,8 @@
 ---
-Name: colorpickerconfig
+Name: palettecolorfieldconfig
 ---
 SilverStripe\Admin\LeftAndMain:
   extra_requirements_css:
-    - "sitelease/colorpicker:client/dist/styles/bundle.css"
+    - "sitelease/sl-palette-color-field:client/dist/styles/bundle.css"
   extra_requirements_javascript:
-    - "sitelease/colorpicker:client/dist/js/bundle.js"
+    - "sitelease/sl-palette-color-field:client/dist/js/bundle.js"

@@ -11,15 +11,15 @@ In order to keep the site accessible, custom color selection is not implemented.
 To install this module, you can do so with Composer:
 
 ```
-composer require sitelease/colorpicker
+composer require sitelease/sl-palette-color-field
 ```
 
 ## Usage
 
-You can use the `ColorPickerField` as follows:
+You can use the `PaletteColorField` as follows:
 
 ```php
-    use Sitelease\Colorpicker\Forms\ColorPickerField;
+    use Sitelease\Colorpicker\Forms\PaletteColorField;
     //...
 
     public function getCMSFields()
@@ -29,7 +29,7 @@ You can use the `ColorPickerField` as follows:
         $fields->addFieldsToTab(
             'Root.Main',
             [
-                ColorPickerField::create(
+                PaletteColorField::create(
                     'MyColorField',
                     _t(
                         __CLASS__ . '.MyColorField',
