@@ -84,7 +84,8 @@ class MultiColorPickerField extends EnhancedKeyValueField
         if (!$this->readonly && $this->isItemCreationEnabled()) {
             // Add a "new item" interface
             $keyField = $this->createSelectList('new', $nameKey, $keyOptions, '', $keyFieldPlaceholder, "mventryfield--key");
-            $valField = $this->createSelectList('new', $nameVal, $valueOptions, '', $valueFieldPlaceholder, "mventryfield--value");
+            // $valField = $this->createSelectList('new', $nameVal, $valueOptions, '', $valueFieldPlaceholder, "mventryfield--value");
+            $valField = $this->createColorPicker('new', $nameVal, $i, '', $valueFieldPlaceholder, "mventryfield--value");
 
             // If item removal is enabled, add a removal button to the "new item" markup
             if ($this->isItemRemovalEnabled()) {
@@ -111,7 +112,7 @@ class MultiColorPickerField extends EnhancedKeyValueField
 
         return $listTag;
     }
-
+ 
     protected function createColorPicker($number, $name, $cssVar, $value = '', $placeholder = '', $extraClasses = '')
     {
         $attrs = [
@@ -127,10 +128,6 @@ class MultiColorPickerField extends EnhancedKeyValueField
         }
 
         if ($this->disabled) {
-            $colorPickerField->setDisabled(true);
-        }
-
-        if (!count($values)) {
             $colorPickerField->setDisabled(true);
         }
 
