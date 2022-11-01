@@ -1,15 +1,15 @@
 <?php
 
-namespace Sitelease\Colorpicker\Tests\Forms;
+namespace Sitelease\PaletteColorField\Tests\Forms;
 
-use Sitelease\Colorpicker\Forms\ColorPickerField;
+use Sitelease\PaletteColorField\Forms\PaletteColorField;
 use SilverStripe\Dev\SapphireTest;
 
-class ColorPickerFieldTest extends SapphireTest
+class PaletteColorFieldTest extends SapphireTest
 {
     public function testGetSourceValues()
     {
-        $field = new ColorPickerField('test');
+        $field = new PaletteColorField('test');
         $field->setSource([
             [
                 'Title' => 'Red',

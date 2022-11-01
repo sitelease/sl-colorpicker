@@ -1,10 +1,10 @@
 <?php
 
-namespace Sitelease\Colorpicker\Forms;
+namespace Sitelease\PaletteColorField\Forms;
 
 use SilverStripe\Forms\SingleSelectField;
 
-class ColorPickerField extends SingleSelectField
+class PaletteColorField extends SingleSelectField
 {
     public function __construct($name, $title = null, $source = array(), $value = null)
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Sitelease\Colorpicker\Forms;
+namespace Sitelease\PaletteColorField\Forms;
 
 use Sitelease\OpenCore\Utilities\StringUtils;
 use Sitelease\LiveColorField\Forms\LiveColorField;

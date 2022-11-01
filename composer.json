@@ -1,5 +1,5 @@
 {
-    "name": "sitelease/sl-colorpicker",
+    "name": "sitelease/sl-palette-color-field",
     "description": "Color picker fields built in react",
     "type": "silverstripe-vendormodule",
     "keywords": [
@@ -17,8 +17,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Sitelease\\Colorpicker\\": "src/",
-            "Sitelease\\Colorpicker\\Tests\\": "tests/"
+            "Sitelease\\PaletteColorField\\": "src/",
+            "Sitelease\\PaletteColorField\\Tests\\": "tests/"
         }
     },
     "extra": {
