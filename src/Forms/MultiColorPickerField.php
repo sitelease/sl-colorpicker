@@ -131,54 +131,6 @@ class MultiColorPickerField extends EnhancedKeyValueField
             $colorPickerField->setDisabled(true);
         }
 
-        return $colorPickerField;
+        return $colorPickerField->Field();
     }
-    
-    public function createReadonlyInput($attributes, $value)
-    {
-        return HTML::createTag('span', $attributes, Convert::raw2xml($value));
-    }
-
-    public function createInput($attributes, $value = null)
-    {
-        $attributes['value'] = $value;
-        return HTML::createTag($this->tag, $attributes);
-    }
-
-    public function performReadonlyTransformation()
-    {
-        $new = clone $this;
-        $new->setReadonly(true);
-        return $new;
-    }
-
-    public function setValue($v, $data = null)
-    {
-        if (is_array($v)) {
-            // we've been set directly via the post - lets convert things to an appropriate key -> value
-            // structure
-            if (isset($v['key'])) {
-                $newVal = [];
-
-                for ($i = 0, $c = count($v['key']); $i < $c; $i++) {
-                    if (strlen($v['key'][$i])) {
-                        $newVal[$v['key'][$i]] = $v['val'][$i];
-                    }
-                }
-
-                $v = $newVal;
-            }
-        }
-
-        if ($v instanceof MultiValueField) {
-            $v = $v->getValues();
-        }
-
-        if (!is_array($v)) {
-            $v = [];
-        }
-
-        parent::setValue($v);
-    }
-    
 }
