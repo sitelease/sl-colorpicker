@@ -69,7 +69,7 @@ class MultiColorPickerField extends EnhancedKeyValueField
                     $valField = $this->createColorPicker($i, $nameVal, $i, $v, $valueFieldPlaceholder, "mventryfield--value");
                     
                     // If item removal is enabled, add a removal button to each item
-                    if ($this->isItemRemovalEnabled()) {
+                    if ($this->isItemRemovable($i)) {
                         $fields[] = $keyField.' '.$valField.' '.$this->getRemovalButtonMarkup();
                     } else {
                         $fields[] = $keyField.' '.$valField;
@@ -88,7 +88,7 @@ class MultiColorPickerField extends EnhancedKeyValueField
             $valField = $this->createColorPicker('new', $nameVal, $i, '', $valueFieldPlaceholder, "mventryfield--value");
 
             // If item removal is enabled, add a removal button to the "new item" markup
-            if ($this->isItemRemovalEnabled()) {
+            if ($this->isItemRemovable($i)) {
                 $fields[] = $keyField.' '.$valField.' '.$this->getRemovalButtonMarkup();
             } else {
                 $fields[] = $keyField.' '.$valField;
@@ -127,8 +127,8 @@ class MultiColorPickerField extends EnhancedKeyValueField
             $colorPickerField->setAttribute("data-item-creation", "true");
         }
 
-        if ($this->disabled) {
-            $colorPickerField->setDisabled(true);
+        if (!$this->isItemEditable($number)) {
+            $colorPickerField = $colorPickerField->performReadonlyTransformation();
         }
 
         return $colorPickerField->Field();
